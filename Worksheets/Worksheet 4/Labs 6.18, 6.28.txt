@@ -1,0 +1,46 @@
+// 6.18 LAB: Miles to track laps
+#include <stdio.h>
+
+/* Define your function here */ 
+double MilesToLaps(double miles) {
+   return miles / 0.25;
+}
+
+int main(void) {
+
+   /* Type your code here. Your code must call the function.  */
+   double miles;
+   scanf("%lf", &miles);
+   printf("%0.2lf\n", MilesToLaps(miles));
+
+   return 0;
+}
+
+// 6.28 LAB: Max and min numbers
+#include <stdio.h>
+
+/* Define your function here */ 
+int LargestNumber(int userNum1, int userNum2, int userNum3) {
+   if (userNum1 >= userNum2 && userNum1 >= userNum3) return userNum1;
+   else if (userNum2 >= userNum1 && userNum2 >= userNum3) return userNum2;
+   else if (userNum3 >= userNum1 && userNum3 >= userNum2) return userNum3;
+   else return -1;
+}
+int SmallestNumber(int userNum1, int userNum2, int userNum3) {
+   if (userNum1 <= userNum2 && userNum1 <= userNum3) return userNum1;
+   else if (userNum2 <= userNum1 && userNum2 <= userNum3) return userNum2;
+   else if (userNum3 <= userNum1 && userNum3 <= userNum2) return userNum3;
+   else return -1;
+}
+
+int main(void) {
+
+   /* Type your code here. Your code must call the function.  */
+   int userNum1, userNum2, userNum3;
+   scanf("%d", &userNum1);
+   scanf("%d", &userNum2);
+   scanf("%d", &userNum3);
+   printf("largest: %d\n", LargestNumber(userNum1, userNum2, userNum3));
+   printf("smallest: %d\n", SmallestNumber(userNum1, userNum2, userNum3));
+   return 0;
+}

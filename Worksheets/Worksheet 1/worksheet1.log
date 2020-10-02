@@ -1,0 +1,7 @@
+    1  pwd
+    2  cd ~
+    3  cd Desktop/
+    4  ls -latr  ; mkdir ws1  ; cd ws1
+    5  wget -O out.pdf https://tinyurl.com/uqhsne4
+    6  ls -latr
+    7  history > worksheet1.log

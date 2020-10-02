@@ -1,0 +1,48 @@
+// 5.26 LAB: Print string in reverse
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+
+   /* Type your code here. */
+   char text[50];
+   scanf("%[^\n]s", text);
+   while(!(strcmp(text, "Quit") == 0 || strcmp(text, "quit") == 0 || strcmp(text, "q") == 0)) {
+      for(int i = strlen(text) - 1; i >= 0; i--) printf("%c", text[i]);
+      printf("\n");
+      scanf("%s", text);
+   }
+   return 0;
+}
+
+
+// 6.27 LAB: Convert to binary - functions
+#include <stdio.h>
+
+/* Define your functions here */ 
+void IntegerToReverseBinary(int integerValue, char binaryValue[]) {
+   int index = 0;
+   while (integerValue > 0) {
+      binaryValue[index++] = '0' + integerValue % 2;
+      integerValue /= 2;
+   }
+   binaryValue[index] = '\0'; // Append null character '/0' at the end
+}
+void ReverseString(char inputString[], char reversedString[]) {
+   int length = 0;
+   while (inputString[length]) length++; // Traverses array until unll '/0'
+   for(int i = 0; i < length; i++) reversedString[i] = inputString[(length - 1) - i]; // Reverse string
+   reversedString[length] = '\0'; // Append null char at end
+}
+
+int main(void) {
+
+   /* Type your code here. Your code must call the functions. */
+   int number;
+   scanf("%d", &number);
+   char binVal[100], revBinVal[100];
+   IntegerToReverseBinary(number, binVal);
+   ReverseString(binVal, revBinVal);
+   printf("%s\n", revBinVal);
+   return 0;
+}

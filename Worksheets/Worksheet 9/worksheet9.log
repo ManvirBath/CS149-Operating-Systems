@@ -1,0 +1,10 @@
+    1  cd apue.3e
+    2  make all
+    3  cd signals
+    4  make all
+    5  ./sigusr &
+    6  kill -SIGUSR1 7449
+    7  kill -SIGUSR2 7449
+    8  kill -SIGCONT 7449
+    9  kill -9 7449
+   10  history > worksheet9.log

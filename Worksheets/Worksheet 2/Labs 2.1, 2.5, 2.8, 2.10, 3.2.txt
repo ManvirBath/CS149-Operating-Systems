@@ -1,0 +1,73 @@
+// 2.1
+#include <stdio.h>
+
+int main(void) {
+   /* Type your code here. */
+   int userNum;
+   int x;
+   scanf("%d", &userNum);
+   scanf("%d", &x);
+   printf("%d ", userNum /= x);
+   printf("%d ", userNum /= x);
+   printf("%d\n", userNum /= x);
+   return 0;
+}
+
+// 2.5
+#include <stdio.h>
+
+int main(void) {
+   double x;
+   double y;
+   double z;
+   /* Type your code here. Note: Include the math library above first. */
+   scanf("%lf", &x);
+   scanf("%lf", &y);
+   scanf("%lf", &z);
+   printf("%0.2lf %0.2lf %0.2lf %0.2lf\n", pow(x, z), pow(x, pow(y, 2)), fabs(y), sqrtf(pow(x*y, z)));
+
+   return 0;
+}
+
+// 2.8
+#include <stdio.h>
+
+int main(void) {
+   int currentPrice;
+   int lastMonthsPrice;
+   scanf("%d", &currentPrice);
+   scanf("%d", &lastMonthsPrice);
+   /* Type your code here. */
+   printf("This house is $%d. The change is $%d since last month.\nThe estimated monthly mortgage is $%lf.\n", 
+   currentPrice, currentPrice - lastMonthsPrice, (currentPrice * 0.051) / 12 );
+   return 0;
+}
+
+// 2.10
+#include <stdio.h>
+
+int main(void) {
+   char userName[50];
+   scanf("%s", userName);
+   /* Type your code here. */
+   printf("Hello %s, and welcome to CS Online!\n", userName);
+   return 0;
+}
+
+// 3.2
+#include <stdio.h>
+
+int main(void) {
+
+   /* Type your code here. */
+   int x, y, z;
+   scanf("%d", &x);
+   scanf("%d", &y);
+   scanf("%d", &z);
+   if (x <= y && x <= z) 
+      printf("%d\n", x);
+   else if (y <= x && y <= z) 
+      printf("%d\n", y);
+    else
+      printf("%d\n", z);
+}

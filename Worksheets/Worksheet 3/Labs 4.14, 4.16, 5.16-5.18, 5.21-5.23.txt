@@ -1,0 +1,173 @@
+// 4.14 LAB: Convert to binary
+#include <stdio.h>
+
+int main(void) {
+
+   /* Type your code here. */
+   int input;
+   scanf("%d", &input);
+   while(input > 0) {
+   printf("%d", input % 2);
+      input /= 2;
+   }
+   printf("\n");
+   return 0;
+}
+
+// 4.16 LAB: Varied amount of input data
+#include <stdio.h>
+
+int main(void) {
+   /* Type your code here. */
+   int count = 0;
+   int sum = 0;
+   int max = 0;
+   int input;
+   scanf("%d", &input);
+   while(input >= 0) {
+      if(max < input) max = input;
+      count++;
+      sum += input;
+      scanf("%d", &input);
+   }
+   printf("%d %d\n", sum / count, max);
+   return 0;
+}
+
+// 5.16 LAB: Output numbers in reverse
+#include <stdio.h>
+
+int main(void) {
+   const int NUM_ELEMENTS = 20;         // Number of input integers
+   int userVals[NUM_ELEMENTS];          // Array to hold the user's input integers
+
+   /* Type your code here. */
+   int numOfInt; // Number of integers that follow
+   scanf("%d", &numOfInt);
+   for(int i = 0; i < numOfInt; i++) scanf("%d", &userVals[i]);
+   for(int i = numOfInt - 1; i >= 0; i--) printf("%d ", userVals[i]);
+   printf("\n"); // For formatting
+
+   return 0;
+}
+
+// 5.17 LAB: Middle item
+#include <stdio.h>
+
+int main(void) {
+   const int NUM_ELEMENTS = 9;
+   int userValues[NUM_ELEMENTS];    // Set of data specified by the user
+
+   /* Type your code here. */
+   int count = 0;
+   int input;
+   scanf("%d", &input);
+   while(input >= 0) {
+      if (count > 9) {
+         printf("Too many inputs\n");
+         break;
+      }
+      userValues[count] = input;
+      count++;
+      scanf("%d", &input);
+   }
+   if (count <= 9) printf("%d\n", userValues[count / 2]);
+
+   return 0;
+}
+
+// 5.18 LAB: Output values below an amount
+#include <stdio.h>
+
+int main(void) {
+   const int NUM_ELEMENTS = 20;
+   int userValues[NUM_ELEMENTS];    // Set of data specified by the user
+
+   /* Type your code here. */
+   int numOfInt;
+   int threshold;
+   scanf("%d", &numOfInt);
+   for (int i = 0; i < numOfInt; i++) 
+      scanf("%d", &userValues[i]);
+   scanf("%d", &threshold);
+   for(int i = 0;i < numOfInt; i++)
+      if(userValues[i] <= threshold)
+         printf("%d ", userValues[i]);
+   printf("\n");
+
+   return 0;
+}
+
+// 5.21 LAB: Contains the character
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+
+   /* Type your code here. */
+   char list[20][10];
+   int count;
+   char searchCharacter;
+   scanf("%d", &count);
+   for(int i = 0; i < count; i++) 
+      scanf("%s", list[i]);
+   scanf(" %c", &searchCharacter);
+   for(int i = 0; i < count; i++) 
+      if(strchr(list[i], searchCharacter))
+         printf("%s\n", list[i]);
+   return 0;
+}
+
+// 5.22 LAB: Elements in a range
+#include <stdio.h>
+
+int main(void) {
+
+   /* Type your code here. */
+   int numOfInt, lowerBound, upperBound;
+   scanf("%d", &numOfInt);
+   int numbers[numOfInt];
+   for(int i = 0; i < numOfInt; i++) scanf("%d", &numbers[i]);
+   scanf("%d", &lowerBound);
+   scanf("%d", &upperBound);
+   
+   for(int i=0;i<numOfInt;++i)
+      if(lowerBound <= numbers[i] && numbers[i] <= upperBound) 
+         printf("%d ", numbers[i]);
+   printf("\n");
+
+   return 0;
+}
+
+
+// 5.23 LAB: Two smallest numbers
+#include <stdio.h>
+
+int main(void) {
+
+   /* Type your code here. */
+   int numOfInt, smallest, secondSmallest;
+   scanf("%d", &numOfInt);
+   int numbers[numOfInt];
+   
+   for(int i = 0; i < numOfInt; i++) scanf("%d", &numbers[i]);
+   // Assign initial values
+   if(numbers[0] < numbers[1]) {
+      smallest = numbers[0];
+      secondSmallest = numbers[1];
+   } else {
+      secondSmallest = numbers[0];
+      smallest = numbers[1];
+   }
+   
+   for(int i = 2; i < numOfInt; i++) {
+      if(numbers[i] < smallest) {
+         secondSmallest = smallest;
+         smallest = numbers[i];
+      } else if(numbers[i] < secondSmallest) {
+            secondSmallest = numbers[i];
+      }
+   }
+   printf("%d %d\n", smallest, secondSmallest);
+   return 0;
+}

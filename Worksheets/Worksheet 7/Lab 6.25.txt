@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+
+/* Define your function here */
+int CountCharacters(char userChar, char* userString) {
+   int count = 0;
+   for(int i = 0; userString[i] != '\0'; i++)
+      if(userString[i] == userChar)
+         count++;
+   return count;
+}
+
+int main(void) {
+   /* Type your code here. */
+   char userChar;
+   char userString[50];
+   scanf("%c", &userChar);
+   scanf("%s", userString);
+   printf("%d\n", CountCharacters(userChar, userString));
+   return 0;
+}

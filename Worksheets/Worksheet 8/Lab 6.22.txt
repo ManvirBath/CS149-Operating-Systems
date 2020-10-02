@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+/* Define your function here */ 
+void SwapValues(int* userVal1, int* userVal2) {
+   int temp = *userVal1;
+   *userVal1 = *userVal2;
+   *userVal2 = temp;
+   
+}
+
+int main(void) {
+
+   /* Type your code here. Your code must call the function.  */
+   int userVal1, userVal2;
+   scanf("%d", &userVal1);
+   scanf("%d", &userVal2);
+   SwapValues(&userVal1, &userVal2);
+   printf("%d %d\n", userVal1, userVal2);
+
+   return 0;
+}

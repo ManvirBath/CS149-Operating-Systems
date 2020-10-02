@@ -1,0 +1,88 @@
+    1  ls
+    2  cd apue.3e
+    3  ls
+    4  rsync -arv filedir/ filedir1/
+    5  cp -r filedir/ filedir2/
+    6  ls -latr filedir1/
+    7  ls -latr filedir2/
+    8  cd filedir1
+    9  ls
+   10  echo hello > access.c
+   11  stat access.c
+   12  ls
+   13  find . -name unlink.c
+   14  find /home -name *.jpg
+   15  fund /home -name *.c
+   16  find /home -name *.c
+   17  cd
+   18  ls
+   19  cd apue.3e
+   20  cd filedir1
+   21  strace mkdir mydir
+   22  cd mydir
+   23  ls
+   24  rmdir() ls
+   25  rmdir() mydir
+   26  cd ..
+   27  rmdir() mydir
+   28  rmdir mydir
+   29  strace cat zap.c
+   30  ls -a
+   31  ls -al
+   32  strace mkdir temp
+   33  cp cdpwd.c test.c
+   34  cp -r filedir temp
+   35  cp -r filedir1 temp
+   36  cp -r test.c temp
+   37  rsync filedir1/ temp/
+   38  ls
+   39  cd temp
+   40  ls
+   41  ls -a
+   42  ls -al
+   43  unlink test.c
+   44  ls
+   45  ls -a
+   46  cd ..
+   47  cd temp
+   48  rmdir() temp
+   49  ls
+   50  cd ..
+   51  rmdir temp
+   52  ls
+   53  strace mkdir mydir
+   54  cp unmask.c mydir
+   55  cp unmask.c move.c
+   56  ls
+   57  cp umask.c mmm.c
+   58  cp -r mm.c mydir
+   59  cp -r mmm.c mydir
+   60  find . -name mmm.c
+   61  find /home -name mmm.c
+   62  find -name *.c
+   63  find /home -name *.c
+   64  pwd
+   65  ls
+   66  cd mydir
+   67  ls
+   68  mv mmm.c cool.c
+   69  ls
+   70  strace cat cool.c
+   71  ls -a
+   72  ls -al
+   73  unlink cool.c
+   74  ls -al
+   75  cd ..
+   76  unlink mydir
+   77  rmdir() mydir
+   78  rmdir(mydir_
+   79  rmdir mydir
+   80  ls
+   81  chmod -R 775
+   82  chmod -R 775 test.c
+   83  ls -a
+   84  ls -al
+   85  chmod -R 775 zap.c
+   86  ls -a
+   87  ls -al
+   88  history > worksheet14.log

@@ -1,0 +1,127 @@
+
+
+//1.1
+#include <stdio.h>
+
+int main(void) {
+   int userNum;
+   int userNumSquared;
+   
+   scanf("%d", &userNum);
+   
+   userNumSquared = userNum * userNum;   // Bug here; fix it when instructed
+   
+   printf("%d\n", userNumSquared);         // Output formatting issue here; fix it when instructed
+
+   return 0;
+}
+
+//1.2
+#include <stdio.h>
+
+int main(void) {
+   int x;
+
+   printf("Enter x: \n");
+   scanf("%d", &x);
+   
+   //printf("%d\n", x);  // Student mistakenly is echo'ing the input to output to match example
+   printf("x doubled is: %d\n", 2 * x);
+   
+   return 0;
+}
+
+//1.3
+#include <stdio.h>
+
+int main(void) {
+
+   /* Type your code here. */
+   printf("Hello World!\n");
+   return 0;
+}
+
+//1.4
+#include <stdio.h>
+
+int main(void) {
+   /* Type your code here. */
+   printf("  NO PARKING\n");
+   printf("2:00 - 6:00 a.m.\n");
+   return 0;
+}
+
+//1.5
+int main(void) {
+   int baseInt;
+   int headInt;
+   
+   /* Type your code here. */
+   scanf("%d/n", &baseInt);
+   scanf("%d/n", &headInt);
+   printf("    %d\n", headInt);
+   printf("    %d%d\n", headInt, headInt);
+   printf("%d%d%d%d%d%d%d\n", baseInt, baseInt, baseInt, baseInt, headInt, headInt, headInt);
+   printf("%d%d%d%d%d%d%d%d\n", baseInt, baseInt, baseInt, baseInt, headInt, headInt, headInt, headInt);
+   printf("%d%d%d%d%d%d%d\n", baseInt, baseInt, baseInt, baseInt, headInt, headInt, headInt);
+   printf("    %d%d\n", headInt, headInt);
+   printf("    %d\n", headInt);
+   return 0;
+}
+
+//1.6
+#include <stdio.h>
+
+int main(void) {
+   /* Type your code here. */
+   printf("Hello world!\n");
+   printf("How are you?\n");
+   printf("   (I'm fine).\n");
+   return 0;
+}
+
+//1.7
+#include <stdio.h>
+
+int main(void) {
+   int userNum;
+   
+   printf("Enter integer:\n");
+   scanf("%d", &userNum);
+   /* Type your code here. */
+   //printf("%d\n", userNum);
+   int userNumSquared = userNum * userNum;
+   int userNumCubed = userNumSquared * userNum;
+   printf("You entered: %d\n", userNum);
+   printf("%d squared is %d\n", userNum, userNumSquared);
+   printf("And %d cubed is %d!!\n", userNum, userNumCubed);
+   int userNum2;
+   printf("Enter another integer:\n");
+   scanf("%d", &userNum2);
+   int sum = userNum + userNum2;
+   int prod = userNum * userNum2;
+   //printf("%d\n", userNum2);
+   printf("%d + %d is %d\n", userNum, userNum2, sum);
+   printf("%d * %d is %d\n", userNum, userNum2, prod);
+   
+   return 0;
+}
+
+//1.8
+#include <stdio.h>
+
+int main(void) {
+   // Draw tree
+   printf("   *\n");
+   printf("  ***\n");
+   /* Type your code here. */
+   printf(" *****\n");
+   printf("*******\n");
+   printf("  ***\n");
+   printf("\n\n");
+   printf("/\\   /\\\n");
+   printf("  o o\n");
+   printf(" =   =\n");
+   printf("  ---\n");
+   return 0;
+}

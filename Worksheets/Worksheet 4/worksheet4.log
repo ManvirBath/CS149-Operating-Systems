@@ -1,0 +1,17 @@
+    1  wget http://www.apuebook.com/src.3e.tar.gz
+    2  gunzip src.3e.tar.gz
+    3  tar xvf src.3e.tar
+    4  cd apue.3e
+    5  cd proc
+    6  make all
+    7  ./fork1
+    8  ./fork2
+    9  pwd
+   10  pstree
+   11  ps -a -f -x
+   12  ps -a -f -x | more
+   13  top
+   14  man kill
+   15  echo $?
+   16  echo $$
+   17  history > worksheet4.log

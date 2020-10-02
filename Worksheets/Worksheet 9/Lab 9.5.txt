@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include <string.h>
+
+int main(void) {
+   /* Type your code here. */
+   char total[50], string1[50], string2[50];
+   while(1) {
+      printf("Enter input string:\n");
+      fgets(total, 50, stdin);
+      if(total[0] == 'q') break; // If q was entered, break
+      // Parse first string
+      int i;
+      for(i = 0; total[i] != ',' && total[i] != '\0'; i++) 
+         if(total[i] != ' ') string1[i] = total[i]; // Skip spaces
+      string1[i] = '\0'; // End the first string (just before the comma or null)
+      // Check if comma is in input string
+      if(total[i] != ',') {
+         printf("Error: No comma in string.\n\n");
+         continue;
+      } else {
+         while(total[i] == ',' || total[i] == ' ') i++; // Skip comma and spaces if comma is in input string
+      }
+      // Parse second string
+      int j;
+      for(j = 0; total[i] != '\0'; j++, i++) string2[j] = total[i]; // Skip spaces
+      string2[j] = '\0'; // End the second string (just before the null)
+      printf("First word: %s\n", string1);
+      printf("Second word: %s\n", string2);
+   }
+   return 0;
+}
